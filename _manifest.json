@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "id": "mizuku.smart-quote",
+  "version": "1.0.0",
+  "name": "智能引用",
+  "description": "接管 Maisaka 的 reply 工具，引用与否完全由插件按配置判定，模型不再参与。支持关键词条目：可加多条，每条自带「关键词 + 命中后怎么做 + 在哪些会话生效」，按被回复消息的正文自上而下匹配、命中第一条即停（顺序即优先级，把「不引用」排前面即黑名单优先），每条还可限定具体群号 / QQ 号。群聊与私聊各自独立设置：引用间隔阈值、低于该间隔不引用、生效名单 / 排除名单、各自的随机权重，并支持真 @ 对方（私聊默认不 @）。另提供命令查看当前会话策略与关键词概览。",
+  "author": {
+    "name": "mizuku",
+    "url": "https://github.com/mizuku003"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/mizuku003/maibot-smart-quote",
+    "homepage": "https://github.com/mizuku003/maibot-smart-quote",
+    "documentation": "https://github.com/mizuku003/maibot-smart-quote/blob/main/README.md",
+    "issues": "https://github.com/mizuku003/maibot-smart-quote/issues"
+  },
+  "changelog": "CHANGELOG.md",
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.2.99"
+  },
+  "sdk": {
+    "min_version": "2.7.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "capabilities": ["send.text", "chat.get_all_streams"],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": ["zh-CN"]
+  },
+  "plugin_type": "extension",
+  "display": {
+    "icon": {
+      "type": "lucide",
+      "value": "quote"
+    }
+  }
+}
